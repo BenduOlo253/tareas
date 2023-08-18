@@ -1,3 +1,6 @@
+//Alumno: José Manuel Roberto Badillo.
+//Descripción: Crear un programa en el cual se plasme en pantalla un mensaje, usando variables.
+
 public class _p01_HolaMundo {
     public static void main(String[] args) {
         String amigo = "Juan";
