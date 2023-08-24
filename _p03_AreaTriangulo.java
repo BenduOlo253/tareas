@@ -24,5 +24,5 @@ public class _p03_AreaTriangulo {
 
         //Se muestran los datos en pantalla.
         System.out.println(String.format("El triangulo de base %d y altura %d tiene un area de %.2f", base, altura, area));
-    }
+    } 
 }
