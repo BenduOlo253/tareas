@@ -23,7 +23,7 @@ public class _p10_HipotenusaTriangulo {
 
         //Se realizan los calculos.
         Hip = Math.sqrt((Cat1*Cat1) + (Cat2*Cat2));
-
+        
         //Se muestran los resultados en pantalla.
         System.out.println(String.format("La hipotenusa del triangulo es de: %.2f.", Hip));
     }

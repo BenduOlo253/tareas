@@ -17,7 +17,7 @@ public class _p12_ConvertirTemperatura {
 
         //Se realizan los calculos.
         TempCel = (TempFa - 32)/1.8;
-
+        
         //Se muestran los resultados.
         System.out.printf("La temperatura de %.2f grados Fahrenheit es equivalente a %.2f grados Celsius.", TempFa, TempCel);
         }

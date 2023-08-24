@@ -23,7 +23,5 @@ public class _p15_ConvertirADolares{
 
         //Mostramos resultados en pantalla.
         System.out.printf("La cantidad de %.2f dolares estadounidenses equivale a %.2f pesos mexicanos.",dlrs, psmxn);
-        
-
     }
 }
