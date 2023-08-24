@@ -23,7 +23,7 @@ public class _p04_PagaTrabajador {
         pagabruta = horas * paga;
         impuesto = pagabruta * tasa;
         paganeta= pagabruta - impuesto;
-        
+    
         //Salida.
         System.out.println("Reesumen de pagos\n");
         System.out.println(String.format("El trabajador %s, trabajó %d horas, con una paga de %.2f pesos la hora, se asume una taza de impuesto de %.2f", nombre, horas, paga, tasa));

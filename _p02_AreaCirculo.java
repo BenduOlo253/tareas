@@ -19,5 +19,5 @@ public class _p02_AreaCirculo {
 
         //Se muestran los resultados en pantalla.
         System.out.println("El circulo de radio "+ radio +" tine un area de "+ area);
-    }    
+    }
 }
