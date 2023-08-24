@@ -4,12 +4,20 @@
 import java.util.Scanner;
 public class _p02_AreaCirculo {
     public static void main(String[] args) {
+        //Declaramos variables.
         double radio, area;
+
+        //Creamos una entrada de datos.
         Scanner numIng = new Scanner(System.in);
+
+        //Obtencion de datos.
         System.out.print("Digita el radio del círculo: ");
         radio = numIng.nextFloat();
-        area= Math.PI * Math.pow(radio,2);
-        System.out.println("El circulo de radio "+ radio +" tine un area de "+ area);
 
+        //Se realizan los calculos.
+        area= Math.PI * Math.pow(radio,2);
+
+        //Se muestran los resultados en pantalla.
+        System.out.println("El circulo de radio "+ radio +" tine un area de "+ area);
     }    
 }

@@ -19,10 +19,11 @@ public class _p09_Dividir_En_Cifras{
         cent = num / 100 ;
         dec = ( num - cent * 100) / 10 ;
         units = ( num - (cent * 100 + dec * 10) );
+
+        //Se muestran los resultados en pantalla.
         System.out.println("El nuemero introducido fue : " + num);
         System.out.println("Centenas : " + cent);
         System.out.println("Decenas : " + dec);
         System.out.println("Unidades : " + units);
-
     }
 }
