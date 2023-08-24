@@ -17,5 +17,5 @@
 - _p11_CalcularAngulo.
 - _p12_ConvertirTemperatura.
 - _p13_VolumenCilindrico.
-- _p14_
-- _p15_
+- _p14_CalculoTiempo.
+- _p15_ConvertirADolares.
