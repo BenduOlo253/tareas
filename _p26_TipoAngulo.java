@@ -29,5 +29,6 @@ public class _p26_TipoAngulo {
         if(angulo==360) System.out.printf("%d° es un angulo completo", angulo);
 
         System.out.println("\nProceso terminado ....");
+        DatoIng.close();
     }
 }

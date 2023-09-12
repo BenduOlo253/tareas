@@ -57,5 +57,6 @@ public class _p28_LeyDeNewton {
         } else
         //Mostramos un mensaje si la opcion es erronea.
         System.out.println("\nOpcion Invalida \n");
+        DatoIng.close();
     }
 }

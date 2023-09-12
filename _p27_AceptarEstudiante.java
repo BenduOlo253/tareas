@@ -33,5 +33,6 @@ public class _p27_AceptarEstudiante {
         System.out.println("Solo aceptamos estudiantes mayores de edad");
 
         System.out.println("\nProceso terminado ...");
+        DatoIng.close();
     }
 }

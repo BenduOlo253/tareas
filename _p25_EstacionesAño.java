@@ -29,5 +29,6 @@ public class _p25_EstacionesAño {
             } 
         }
         System.out.println("\nProceso terminado ....");
+        DatoIng.close();
     }
 }
