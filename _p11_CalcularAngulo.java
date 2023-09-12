@@ -21,5 +21,6 @@ public class _p11_CalcularAngulo {
         
         //Se muestran los resultados en pantalla.
         System.out.printf("El Tercer angulo tiene una medida de: %.2f",Angl3);
+        DatoIng.close();
     }
 }

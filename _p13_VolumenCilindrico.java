@@ -21,6 +21,7 @@ public class _p13_VolumenCilindrico {
         
         //Se muestran los resultados en pantalla.
         System.out.printf("El volumen del cilindro es: %.2f",V);
+        DatoIng.close();
     }
 
 }

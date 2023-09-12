@@ -24,5 +24,6 @@ public class _p14_CalculoTiempo {
 
         //Mostramos los resultados en pantalla.
         System.out.printf("Las equivalencias de %.2f horas son:\nDías: %.2f.\nMinutos: %.2f.\nSegundos: %.2f.", hrs, days, min, seg);
+        datoIng.close();
     } 
 }
