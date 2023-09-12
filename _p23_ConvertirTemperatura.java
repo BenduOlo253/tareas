@@ -45,5 +45,6 @@ public class _p23_ConvertirTemperatura {
                 System.out.println("La opción que usted ha ingresado no es válida.");
             }
         }
+        DatoIng.close();
     }
 }

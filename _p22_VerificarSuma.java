@@ -30,5 +30,7 @@ public class _p22_VerificarSuma {
     else{
         System.out.printf("La suma de %d y %d no es igual a %d", Var1, Var2, Var3);
     }
+    DatoIng.close();
     }
+    
 }

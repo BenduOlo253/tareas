@@ -28,5 +28,6 @@ public class _p21_VerificarNumero{
             System.out.printf("El numero %d es mayor que cero, por lo tanto es negativo.", num);
         }
         }
+        DatoIng.close();
     }
 }

@@ -31,5 +31,6 @@ public class _p24_PagaTrabajadorV2 {
             total = hrs * paga;
             System.out.printf("\nPago total: %.2f", total);            
         }
+        DatoIng.close();
     }
 }
