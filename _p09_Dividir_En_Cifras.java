@@ -25,5 +25,6 @@ public class _p09_Dividir_En_Cifras{
         System.out.println("Centenas : " + cent);
         System.out.println("Decenas : " + dec);
         System.out.println("Unidades : " + units);
+        DatoIng.close();
     }
 }

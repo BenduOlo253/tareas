@@ -30,5 +30,6 @@ public class _p06_PromedioCalificaciones {
         else{
             System.out.println("\nDeberias esforzarte mas, has reprobado.");
         }
-        }
+        DatoIng.close();
+    }
 }

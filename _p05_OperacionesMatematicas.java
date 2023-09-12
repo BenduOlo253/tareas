@@ -31,5 +31,6 @@ public class _p05_OperacionesMatematicas{
         System.out.println(String.format("El resultado de la multiplicación entre %.2f, y %.2f es: %.2f.", Var1, Var2, multi));
         System.out.println(String.format("El resultado de la división entre %.2f, y %.2f es: %.2f.\n Y el residuo es %.2f ", Var1, Var2, div, res));
         System.out.println(String.format("El resultado de %.2f elevado a %.2f es: %.2f", Var1, Var2, pot));
+        datoIng.close();
     }
 }
