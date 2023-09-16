@@ -71,4 +71,7 @@
 - _p47_ConjeturaCollatz.
 
 ## Practica 3.
-- _p48_
+- _p48_ImparesAscendente.
+- _p49_ParesDescendente.
+- _p50_ConversionTemperaturas.
+- _p51_SerieFibonacci.
