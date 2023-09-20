@@ -75,3 +75,11 @@
 - _p49_ParesDescendente.
 - _p50_ConversionTemperaturas.
 - _p51_SerieFibonacci.
+
+## Actividad 9.
+- _p52_Numeros1aN.
+- _p53_NumerosNa1.
+- _p54_ArribaAbajo.
+- _p55_SumaParesImpares.
+- _p55_SumaPromedio.
+
