@@ -109,3 +109,9 @@
 - _p72_SumaParesIpares.
 - _p73_Factorial.
 - _p74_CuadroCaracter.
+
+## Practica 5.
+- _p75_NumeroMenor.
+- _p76_DiaSemana.
+- _p77_MedidasLongitud.
+- _p78_Angulo.
