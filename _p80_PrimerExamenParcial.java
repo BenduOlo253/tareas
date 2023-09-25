@@ -122,7 +122,7 @@ public class _p80_PrimerExamenParcial{
                         op1 = DatoIng.nextInt();
                         switch (op1) {
                             case 1:
-                                System.out.printf("Los ingresos totales son: $%.2f", total);
+                                System.out.printf("Los ingresos totales son: $%.2f\n", total);
                                 if(total<100) System.out.println("Los ingresos son bajos");
                                 else if(total>100 && total< 200) System.out.println("Los ingresos son moderados.");
                                 else System.out.println("Los ingresos son muy buenos.");
@@ -152,7 +152,7 @@ public class _p80_PrimerExamenParcial{
                     //Limpiamos la pantalla de la consola.
                     System.out.print("\033[H\033[2J");System.out.flush();
                     System.out.printf("La cantidad de personal es: \nAlumnos...%d\nDocentes...%d\nTrabajadores...%d\nHombres: %d\n", Alumno, Docente, Trabajador, sexoCH, sexoCM);
-                    System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine();
+                    System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                 break;
                 case 4:
                     System.out.println("\n\nGracias por usar nuestro programa."); 
