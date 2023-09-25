@@ -139,7 +139,7 @@ public class _p80_PrimerExamenParcial{
                                 System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                 break;
                             case 4:
-                                System.out.printf("Los ingresos de los trabajadores son: $%.2\n", totalT);
+                                System.out.printf("Los ingresos de los trabajadores son: $%.2f\n", totalT);
                                 System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                 break;
                             case 5:
