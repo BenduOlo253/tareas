@@ -9,15 +9,15 @@ public class _p80_PrimerExamenParcial{
         System.out.print("\033[H\033[2J");System.out.flush();
 
         //Creamos una entrada de datos.
-        Scanner DatoIng = new Scanner(System.in);
+        Scanner DatoIng1 = new Scanner(System.in);
         
         //Obtencion de datos.
-        System.out.println("Ingrese su nombre: "); DatoIng.nextLine();
-        System.out.println("Ingrese su edad: "); int edad = DatoIng.nextInt();
+        System.out.println("Ingrese su nombre: "); DatoIng1.nextLine();
+        System.out.println("Ingrese su edad: "); int edad = DatoIng1.nextInt();
         if(edad<18){
             System.out.println("Los siento, pero solo aceptamos a mayores de edad.");
         }
-        DatoIng.close();
+        DatoIng1.close();
         return edad;
     }
     public static void main(String[] args) {
