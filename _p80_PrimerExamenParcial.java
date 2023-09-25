@@ -50,11 +50,11 @@ public class _p80_PrimerExamenParcial{
                         case 1:
                             if(Registro()>=18){
                                 do{
-                                    System.out.println("Intrese su sexo (F/M): "); sexo = Character.toUpperCase(DatoIng.next().charAt(0));
-                                    if(sexo == 'F'){
+                                    System.out.println("Ingrese su sexo (H/M): "); sexo = Character.toUpperCase(DatoIng.next().charAt(0));
+                                    if(sexo == 'M'){
                                         sexoCM++;
                                     }
-                                    else if(sexo == 'M'){
+                                    else if(sexo == 'H'){
                                         sexoCH++;
                                     }
                                     else{
@@ -64,17 +64,17 @@ public class _p80_PrimerExamenParcial{
                                     Alumno++;
                                     totalA += cuota;
                                     total += cuota;
-                                }while(sexo =='F' || sexo =='M');
+                                }while(sexo != 'H' && sexo != 'M');
                             }
                             break;
                         case 2:
                             if(Registro()>=18){
                                 do{
-                                    System.out.println("Intrese su sexo (F/M): "); sexo = Character.toUpperCase(DatoIng.next().charAt(0));
-                                    if(sexo == 'F'){
+                                    System.out.println("Ingrese su sexo (H/M): "); sexo = Character.toUpperCase(DatoIng.next().charAt(0));
+                                    if(sexo == 'M'){
                                         sexoCM++;
                                     }
-                                    else if(sexo == 'M'){
+                                    else if(sexo == 'H'){
                                         sexoCH++;
                                     }
                                     else{
@@ -84,18 +84,18 @@ public class _p80_PrimerExamenParcial{
                                     Docente++;
                                     totalD += cuota;
                                     total += cuota;
-                                }while(sexo == 'F' || sexo == 'M');
+                                }while(sexo != 'H' && sexo != 'M');
                             }
                             break;
 
                         case 3:
                             if(Registro()>=18){
                                 do{
-                                    System.out.println("Intrese su sexo (F/M): "); sexo = Character.toUpperCase(DatoIng.next().charAt(0));
-                                    if(sexo == 'F'){
+                                    System.out.println("Ingrese su sexo (H/M): "); sexo = Character.toUpperCase(DatoIng.next().charAt(0));
+                                    if(sexo == 'M'){
                                         sexoCM++;
                                     }
-                                    else if(sexo == 'M'){
+                                    else if(sexo == 'H'){
                                         sexoCH++;
                                     }
                                     else{
@@ -105,7 +105,7 @@ public class _p80_PrimerExamenParcial{
                                     Trabajador++;
                                     totalT += cuota;
                                     total += cuota;
-                                }while(sexo == 'F' || sexo == 'M');
+                                }while(sexo != 'H' && sexo != 'M');
                             }
                             break;
                         default:
@@ -139,15 +139,17 @@ public class _p80_PrimerExamenParcial{
                                 System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                 break;
                             case 4:
-                                System.out.printf("Los ingresos de los trabajadores son: $%.2f\n", totalT);
+                                System.out.printf("Los ingresos de los trabajadores son: $%.2\n", totalT);
                                 System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
+                                break;
+                            case 5:
                                 break;
                             default:
                                 System.out.println("La opcion que usted ha ingresado es invalida.\n");
                                 System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                 break;
                         }
-                    }while(op1 !=4);
+                    }while(op1 !=5);
                     break;
 
                 case 3:
