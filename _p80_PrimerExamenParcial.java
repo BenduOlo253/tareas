@@ -34,7 +34,7 @@ public class _p80_PrimerExamenParcial{
 
         //Limpiamos la pantalla de la consola.
         System.out.print("\033[H\033[2J");System.out.flush();
-        
+
         do{
             System.out.println("Este prorama es un sistema de control escolar.\n");
             System.out.println("Ingresar...[1]\nConsultar ingresos...[2]\nConsulta sobre el personal...[3]\nSalir...[4]"); op  = DatoIng.nextInt();
@@ -122,19 +122,27 @@ public class _p80_PrimerExamenParcial{
                         op1 = DatoIng.nextInt();
                         switch (op1) {
                             case 1:
-                                System.out.printf("Los ingresos totales son: %.2f", total);
+                                System.out.printf("Los ingresos totales son: $%.2f", total);
+                                if(total<100) System.out.println("Los ingresos son bajos");
+                                else if(total>100 && total< 200) System.out.println("Los ingresos son moderados.");
+                                else System.out.println("Los ingresos son muy buenos.");
+                                System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                 break;
                             case 2:
-                                System.out.printf("Los ingresos de los docentes son: %.2f", totalD);
+                                System.out.printf("Los ingresos de los docentes son: $%.2f\n", totalD);
+                                System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                 break;
                             case 3:
-                                System.out.printf("Los ingresos de los alumnos son: %.2f", totalA);
+                                System.out.printf("Los ingresos de los alumnos son: $%.2f\n", totalA);
+                                System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                 break;
                             case 4:
-                                System.out.printf("Los ingresos de los trabajadores son: %.2", totalT);
+                                System.out.printf("Los ingresos de los trabajadores son: $%.2\n", totalT);
+                                System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                 break;
                             default:
-                                System.out.println("La opcion que usted ha ingresado es invalida.");
+                                System.out.println("La opcion que usted ha ingresado es invalida.\n");
+                                System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                 break;
                         }
                     }while(op1 !=4);
