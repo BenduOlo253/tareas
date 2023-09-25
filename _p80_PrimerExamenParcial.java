@@ -17,6 +17,7 @@ public class _p80_PrimerExamenParcial{
         if(edad<18){
             System.out.println("Los siento, pero solo aceptamos a mayores de edad.");
         }
+        DatoIng.close();
         return edad;
     }
     public static void main(String[] args) {
