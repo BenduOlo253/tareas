@@ -31,6 +31,10 @@ public class _p80_PrimerExamenParcial{
 
         //Creamos una entrada de datos.
         Scanner DatoIng = new Scanner(System.in);
+
+        //Limpiamos la pantalla de la consola.
+        System.out.print("\033[H\033[2J");System.out.flush();
+        
         do{
             System.out.println("Este prorama es un sistema de control escolar.\n");
             System.out.println("Ingresar...[1]\nConsultar ingresos...[2]\nConsulta sobre el personal...[3]\nSalir...[4]"); op  = DatoIng.nextInt();
