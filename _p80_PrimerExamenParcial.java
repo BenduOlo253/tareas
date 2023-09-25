@@ -16,7 +16,6 @@ public class _p80_PrimerExamenParcial{
         System.out.println("Ingrese su edad: "); int edad = DatoIng.nextInt();
         if(edad<18){
             System.out.println("Los siento, pero solo aceptamos a mayores de edad.");
-            
         }
         return edad;
     }
@@ -32,10 +31,11 @@ public class _p80_PrimerExamenParcial{
         //Creamos una entrada de datos.
         Scanner DatoIng = new Scanner(System.in);
 
-        //Limpiamos la pantalla de la consola.
-        System.out.print("\033[H\033[2J");System.out.flush();
 
-        do{
+
+        do{        
+            //Limpiamos la pantalla de la consola.
+            System.out.print("\033[H\033[2J");System.out.flush();
             System.out.println("Este prorama es un sistema de control escolar.\n");
             System.out.println("Ingresar...[1]\nConsultar ingresos...[2]\nConsulta sobre el personal...[3]\nSalir...[4]"); op  = DatoIng.nextInt();
             switch(op){
@@ -58,13 +58,13 @@ public class _p80_PrimerExamenParcial{
                                         sexoCH++;
                                     }
                                     else{
-                                        System.out.println("La opcion que usted ha ingresado es invalida.");
+                                        System.out.println("La opcion que usted ha ingresado es invalida.\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                     }
                                     cuota = 50;
                                     Alumno++;
                                     totalA += cuota;
                                     total += cuota;
-                                }while(sexo == 'F' || sexo == 'M');
+                                }while(sexo =='F' || sexo =='M');
                             }
                             break;
                         case 2:
@@ -78,7 +78,7 @@ public class _p80_PrimerExamenParcial{
                                         sexoCH++;
                                     }
                                     else{
-                                        System.out.println("La opcion que usted ha ingresado es invalida.");
+                                        System.out.println("La opcion que usted ha ingresado es invalida.\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                     }
                                     cuota = 80;
                                     Docente++;
@@ -99,7 +99,7 @@ public class _p80_PrimerExamenParcial{
                                         sexoCH++;
                                     }
                                     else{
-                                        System.out.println("La opcion que usted ha ingresado es invalida.");
+                                        System.out.println("La opcion que usted ha ingresado es invalida.\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                     }
                                     cuota = 60;
                                     Trabajador++;
@@ -108,6 +108,8 @@ public class _p80_PrimerExamenParcial{
                                 }while(sexo == 'F' || sexo == 'M');
                             }
                             break;
+                        default:
+                            System.out.println("La opcion que usted ha ingresado es invalida."); DatoIng.nextLine(); DatoIng.nextLine();
                     }                    
                     System.out.println("¿Desea registrar a alguien mas? (S/N)"); res = Character.toUpperCase(DatoIng.next().charAt(0));
                 }while(res != 'N' && (op1 <=3 && op1 >0));     
@@ -137,7 +139,7 @@ public class _p80_PrimerExamenParcial{
                                 System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                 break;
                             case 4:
-                                System.out.printf("Los ingresos de los trabajadores son: $%.2\n", totalT);
+                                System.out.printf("Los ingresos de los trabajadores son: $%.2f\n", totalT);
                                 System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                                 break;
                             default:
@@ -151,7 +153,7 @@ public class _p80_PrimerExamenParcial{
                 case 3:
                     //Limpiamos la pantalla de la consola.
                     System.out.print("\033[H\033[2J");System.out.flush();
-                    System.out.printf("La cantidad de personal es: \nAlumnos...%d\nDocentes...%d\nTrabajadores...%d\nHombres: %d\n", Alumno, Docente, Trabajador, sexoCH, sexoCM);
+                    System.out.printf("La cantidad de personal es: \nAlumnos...%d\nDocentes...%d\nTrabajadores...%d\nHombres: %d\nMujeres: %d", Alumno, Docente, Trabajador, sexoCH, sexoCM);
                     System.out.println("\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
                 break;
                 case 4:
@@ -159,7 +161,7 @@ public class _p80_PrimerExamenParcial{
                     DatoIng.close();
                     break;
                 default:
-                    System.out.println("La opcion que usted ha ingresado no es valida.\nPresione <ENTER> para continuar."); DatoIng.nextLine();
+                    System.out.println("La opcion que usted ha ingresado no es valida.\nPresione <ENTER> para continuar."); DatoIng.nextLine(); DatoIng.nextLine();
             }
         }while(op != 4);
     }
