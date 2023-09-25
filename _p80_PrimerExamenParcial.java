@@ -30,9 +30,6 @@ public class _p80_PrimerExamenParcial{
 
         //Creamos una entrada de datos.
         Scanner DatoIng = new Scanner(System.in);
-
-
-
         do{        
             //Limpiamos la pantalla de la consola.
             System.out.print("\033[H\033[2J");System.out.flush();
