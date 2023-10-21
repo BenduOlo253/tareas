@@ -9,7 +9,7 @@ public class _p93_ParesImpares {
         for(int i = 0; i<lista.length; i++){
             if(lista[i]%2 == 0 && lista[i]!=0) contadorpares++;
             if(lista[i]%2!=0 && lista[i]!=0) contadorimpares++;
-        }
+        } 
 
         int[] pares = new int[contadorpares];
         int[] impares = new int[contadorimpares];
