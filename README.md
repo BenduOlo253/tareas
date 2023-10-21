@@ -115,3 +115,62 @@
 - _p76_DiaSemana.
 - _p77_MedidasLongitud.
 - _p78_Angulo.
+
+## Primer examen parcial.
+- _Primer Examen Parcial.
+
+## Actividad 13.
+- _p081_InicializaArregloNumeros.
+- _p082_InicializaArregloCadenas.
+- _p083_InicializaNombresEdades.
+- _p084_LeerArregloCalificaciones.
+- _p085_NombresEdades.
+
+## Actividad 14.
+- _p86_ArregloMostrar.
+- _p87_ArregloTemperaturas.
+- _p88_Aleatorios.
+- _p89_ArregloAleatorios.
+
+## Practica 6.
+- _p90_Temperaturas.
+- _p91_MayoresPromedio.
+- _p92_MayorMenor.
+- _p93_ParesImpares.
+
+## Actividad 15.
+- _p94_Empleado01.
+- _p95_Empleado02.
+- _p96_Empleado03.
+- _p97_Empleado04.
+
+## Practica 7.
+- _p98_Circulo.
+- _p99_Rectangulo.
+- _p100_Articulo.
+
+## Actividad 16.
+- _p101_TrabajoPersona.
+- _p102_AutorLibro.
+- _p103_ClienteFactura.
+
+## Practica 8.
+- _p104_PuntoCirculo.
+- _p105_PuntoTriangulo.
+
+## Actividad 17.
+- _p106_Persona.
+- _p107_Forma.
+
+## Practica 9.
+- _p108_Vehiculo.
+- _p109_FormaV2.
+
+## Actividad 18.
+- _p110_CuentaBancariaV1.
+
+## Actividad 19.
+- _p111_CuentaBancaraV2.
+
+## Practica 10.
+- _p112_ControlVentas.
