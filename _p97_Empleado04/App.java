@@ -8,7 +8,7 @@ public class App {
         empleados.add(new Empleado("Dario Jimenez",33,'H',true));
         empleados.add(new Empleado("Jessica Jimenez",45,'H',true));
         System.out.print("\033[H\033[2J");System.out.flush();
-        System.out.println("\nLos empleados en el ArrayList");
+        System.out.println("\nLos empleados en el ArrayList"); 
 
         for (Empleado empleado : empleados){
             System.out.println(empleado.toString());

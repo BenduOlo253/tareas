@@ -4,7 +4,7 @@ public class App {
     public static void main(String[] args) {
         Empleado empleado1 = new Empleado();
         empleado1.Nombre = "Juan Perez";
-        empleado1.Edad = 35;
+        empleado1.Edad = 35; 
         System.out.println(empleado1.toString());
 
         Empleado empleado2 = new Empleado();
