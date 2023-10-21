@@ -14,7 +14,7 @@ public class _p92_MayorMenor {
         }
         System.out.printf("El numero mayor del arreglo es: %d.\nEl numero menor del arreglo es: %d.", mayor, menor);
     }
-    
+     
     public static void main(String[] args) {
         //Declaramos las variables a utilizar.
         int cont = 1;

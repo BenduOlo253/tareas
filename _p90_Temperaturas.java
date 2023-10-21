@@ -19,7 +19,6 @@ public class _p90_Temperaturas{
         System.out.print(listamod[listamod.length-1] + ".");
     }
 
-
     public static void main(String[] args) {
         //Creamos una entrada de datos.
         Scanner DatoIng = new Scanner(System.in);

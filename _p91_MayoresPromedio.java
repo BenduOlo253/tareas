@@ -50,7 +50,7 @@ public class _p91_MayoresPromedio {
         System.out.println("Ingrese el numero de calificaciones a ingresar: "); int cantNum = DatoIng.nextInt();
 
         float [] listaCal= new float[cantNum];
-
+ 
         //Ingresamos las calificaciones a un arreglo.
         for(int i = 0; i<=(cantNum-1); i++ ){
             System.out.printf("Ingrese la calificacion %d : ", cont); listaCal[i] = DatoIng.nextFloat();
