@@ -1,4 +1,4 @@
-package pruebas;
+package _p112_ControlVentas;
 
 import java.util.ArrayList;
 public class Cliente {
