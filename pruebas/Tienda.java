@@ -1,23 +1,23 @@
-package _p112_ControlVentas;
+package pruebas;
 
 import java.util.ArrayList;
 public class Tienda {
-    private String Nombre, Domicilio, Correo, Propietario;
+    private String Nombre, Domicilio, Propietario;
     private ArrayList<Cliente> Clientes;
 
 
     public Tienda(){
         Clientes = new ArrayList<>();
     }
-    public Tienda(String nombre, String domicilio, String correo, String propietario){
-        this(); Nombre = nombre; Domicilio = domicilio; Correo = correo; Propietario = propietario; 
+    public Tienda(String nombre, String domicilio, String propietario){
+        this(); Nombre = nombre; Domicilio = domicilio; Propietario = propietario; 
     }
     public void agregarCliente(Cliente cliente) {
         Clientes.add(cliente);
     }    
     public void reporte() {
         for (Cliente cliente : Clientes) {
-            System.out.println("> " + cliente);
+            System.out.println("Cliente >> " + cliente);
             for (Venta venta : cliente.getVentas()){System.out.println(venta);}
 
             if(cliente.getVentas().size()!=0) System.out.println();
@@ -31,6 +31,6 @@ public class Tienda {
         return Total;
     }
     public String toString(){
-        return "[Tienda " + Nombre + ", Propietaro: " + Propietario + ", Direccion: " + Domicilio + ", Correo: " + Correo + ", Clientes: " + Clientes.size() + ", Total de ventas: " + getTotal();
+        return String.format("[Tienda %s, Propietaro: %s, Direccion: %s, Clientes: %d, Total de ventas: %.2f]", Nombre, Propietario, Domicilio, Clientes.size(), getTotal());
     }
 }

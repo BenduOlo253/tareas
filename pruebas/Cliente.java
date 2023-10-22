@@ -1,4 +1,4 @@
-package _p112_ControlVentas;
+package pruebas;
 
 import java.util.ArrayList;
 public class Cliente {
@@ -22,10 +22,10 @@ public class Cliente {
     }
     public double getTotal(){
         double Total = 0;
-        for(Venta venta : Ventas){Total += venta.Total;}
+        for(Venta venta : Ventas){Total += venta.getTotalVenta();}
         return Total;
     }
     public String toString(){
-        return "[Nombre: " + Nombre + ", Domicilio: " + Domiclio + ", Correo: " + Correo + ", Ventas: " + this.Ventas.size() + ", Total: " + this.getTotal() + "]";
+        return String.format("[ Nombre= %s, Domicilio= %s, Correo= %s, Ventas= %d, Total= $%.2f]", Nombre, Domiclio, Correo, this.Ventas.size(), this.getTotal());
     } 
 }

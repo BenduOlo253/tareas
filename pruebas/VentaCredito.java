@@ -1,4 +1,4 @@
-package _p112_ControlVentas;
+package pruebas;
 
 public class VentaCredito extends Venta{
     protected int Meses; protected double Interes;

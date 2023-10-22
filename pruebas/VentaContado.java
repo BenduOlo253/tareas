@@ -1,4 +1,4 @@
-package _p112_ControlVentas;
+package pruebas;
 
 public class VentaContado extends Venta {
     private double Descuento; private String Regalo;
