@@ -46,6 +46,7 @@ public class Equipo {
         return total;
     }
     public void reporte(){
+        System.out.println(this.toString()+ "\n");
         for(Jugador jugador : Jugadores){
             System.out.println(jugador.toString());
         }
