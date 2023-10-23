@@ -14,6 +14,6 @@ public class JugadorActivo extends Jugador{
     }
     @Override
     public String toString(){
-        return String.format("- JugadorActivo [Jugador " + this.toString() + " , Partidos= %d, Goles= %d, Bono= %.2f, Total= %.2f]", Partidos, Goles, this.getBono(), (this.getSalario() + this.getBono()));
+        return String.format("- JugadorActivo [Jugador %s , Partidos= %d, Goles= %d, Bono= %.2f, Total= %.2f]", super.toString(), Partidos, Goles, getBono(), (this.getSalario() + this.getBono()));
     }
 }

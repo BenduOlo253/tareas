@@ -16,6 +16,6 @@ public class JugadorEntrenador extends Jugador {
 
     @Override
     public String toString(){
-        return String.format("- JugadorEntrenador, %s Subordinados= %d, Proyectos= %d, Bono= %.2f, Total= %.2f]", this.toString(), Subordinados, Proyectos, getBono(), (this.getSalario() + getBono()));
+        return String.format("- JugadorEntrenador %s Subordinados= %d, Proyectos= %d, Bono= %.2f, Total= %.2f]", super.toString(), Subordinados, Proyectos, getBono(), (this.getSalario() + getBono()));
     }
 }
