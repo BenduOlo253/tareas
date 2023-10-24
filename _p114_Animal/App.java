@@ -5,5 +5,10 @@ public class App {
         Gato migato = new Gato();
         migato.sonido();
         migato.dormir();
+        migato.comer();
+        Perro miperro = new Perro();
+        miperro.sonido();
+        miperro.dormir();
+        miperro.comer();
     }
 }
