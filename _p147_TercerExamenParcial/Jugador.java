@@ -1,6 +1,8 @@
 package _p147_TercerExamenParcial;
 
-public class Jugador {
+import java.io.Serializable;
+
+public class Jugador implements Serializable{
     private String Nombre;
     private int Edad;
     private String Sexo;

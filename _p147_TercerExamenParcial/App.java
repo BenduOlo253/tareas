@@ -26,6 +26,7 @@ public class App extends JFrame implements ActionListener {
     DefaultTableModel modelo;
     JFileChooser fchArchivo;
     JButton btnAgregar, btnGrabar;
+
 public App(){
     //Creamos la ventana y todos los elementos que contenerá.
     super("Liga de futbol");menuBar=new JMenuBar();
@@ -51,7 +52,7 @@ public App(){
     jdlAcercaDe.setSize(300,250);
     jdlAcercaDe.setLocationRelativeTo(null);
     lblDatos = new JLabel("<html>Programación Oriendada a Objetos I<br>Jose Manuel Roberto Badillo</html>",JLabel.CENTER);
-    lblDatos.setFont(new Font("Times New Roman",Font.BOLD, 18));
+    lblDatos.setFont(new Font("Times New Roman",Font.BOLD, 14));
     jdlAcercaDe.add(lblDatos);
     setLayout(new GridLayout(3, 1, 0, 0));
     pnlTabla = new JPanel();
@@ -137,7 +138,7 @@ public App(){
                 File arch = fchArchivo.getSelectedFile();
                 try {
                     datos = Util.desSerializarDatos(arch.getName());
-                this.cargarDatos();
+                    this.cargarDatos();
                 } catch (Exception e2) {
                     JOptionPane.showMessageDialog(this, "Error al procesar el archivo", "Error",JOptionPane.ERROR_MESSAGE);
                 }
@@ -176,13 +177,13 @@ public App(){
         while(dm.getRowCount()>0) dm.removeRow(0);
         Object[] obj = new Object[6];
         for(int i=0; i<datos.size() ; i++) {
-        obj[0] = datos.get(i).getNombre();
-        obj[1] = datos.get(i).getEdad();
-        obj[2] = datos.get(i).getSalario();
-        obj[3] = datos.get(i).getEstadoCivil();
-        obj[4] = datos.get(i).getDescripcion();
-        obj[5] = datos.get(i).getSexo();
-        modelo.addRow(obj);
+            obj[0] = datos.get(i).getNombre();
+            obj[1] = datos.get(i).getEdad();
+            obj[2] = datos.get(i).getSalario();
+            obj[3] = datos.get(i).getEstadoCivil();
+            obj[4] = datos.get(i).getDescripcion();
+            obj[5] = datos.get(i).getSexo();
+            modelo.addRow(obj);
         }
     }    
 
@@ -229,5 +230,5 @@ public App(){
         app.datos=Util.inicializarDatos();
         app.cargarDatos();
         app.activarCampos(false);
-        }
+    }
 }
