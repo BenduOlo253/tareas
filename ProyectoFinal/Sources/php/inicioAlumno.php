@@ -4,6 +4,18 @@
     // Obtiene los datos del formulario
     $User = $_POST['Usuario'];
     $Contraseña = $_POST['Pass'];
+    $opcion = $_POST['login_option'];
+
+    if($opcion == "Docente" && ($User == "0000" && $Contraseña == "EQUISDE")){
+        echo "
+            <script>
+                alert('Usted ha iniciado sesion como administrador');
+                window.location.href = '../html/pagina_principalDocente.html';
+            </script>
+        ";
+    }
+
+
 
     // Consulta SQL para verificar las credenciales del usuario
     $sql = "SELECT * FROM alumnos WHERE Usuario = '$User' AND Contraseña = '$Contraseña'";
@@ -15,7 +27,7 @@
         echo "
             <script>
                 alert('Inicio de sesion exitoso');
-                window.location.href = '../../pagina_principal.html';
+                window.location.href = '../html/pagina_principalAlumno.html';
             </script>
         ";
     } else {
