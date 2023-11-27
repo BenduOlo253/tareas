@@ -12,13 +12,18 @@
 
     if ($ejecutar->num_rows > 0) {
         // Aquí puedes redirigir al usuario a su página principal, por ejemplo
-        ob_start();
-        header("Location: ../Sources/pagina_principal.html");
-        ob_end_flush();
+        echo "
+            <script>
+                alert('Inicio de sesion exitoso');
+                window.location.href = '../../pagina_principal.html';
+            </script>
+        ";
     } else {
-        echo "Matrícula o contraseña incorrecta";
-        ob_start();
-        header("Location: ../Sources/index.html");
-        ob_end_flush();
+        echo "
+            <script>
+                alert('El usuario que usted ingresó no existe');
+                window.location.href = '../../index.html';
+            </script>
+        ";
     }
 ?>
