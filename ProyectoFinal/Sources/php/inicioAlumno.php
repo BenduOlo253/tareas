@@ -1,36 +1,35 @@
 <?php
-    include 'conexion.php';
-    
-    // Obtiene los datos del formulario
-    $User = $_POST['Usuario'];
-    $Contraseña = $_POST['Pass'];
-    $opcion = $_POST['login_option'];
+// Incluye el archivo de conexión a la base de datos
+include 'conexion.php';
 
-    if($opcion == "Docente" && ($User == "0000" && $Contraseña == "EQUISDE")){
-        echo "
-            <script>
-                alert('Usted ha iniciado sesion como administrador');
-                window.location.href = '../html/pagina_principalDocente.html';
-            </script>
-        ";
-    }
+// Obtiene los datos del formulario
+$User = $_POST['Usuario'];
+$Contraseña = $_POST['Pass'];
 
-
-
-    // Consulta SQL para verificar las credenciales del usuario
+// Verifica si las credenciales corresponden al administrador
+if ($User == "0000" && $Contraseña == "admin") {
+    echo "
+        <script>
+            alert('Usted ha iniciado sesión como administrador');
+            window.location.href = '../php/Docentes.php';
+        </script>
+    ";
+} else {
+    // Consulta SQL para verificar las credenciales del usuario en la base de datos
     $sql = "SELECT * FROM alumnos WHERE Usuario = '$User' AND Contraseña = '$Contraseña'";
 
-    $ejecutar = mysqli_query($conexion, $sql);
+    $result = mysqli_query($conn, $sql);
 
-    if ($ejecutar->num_rows > 0) {
-        // Aquí puedes redirigir al usuario a su página principal, por ejemplo
+    if ($result->num_rows > 0) {
+        // Credenciales correctas, redirigir al usuario a su página principal
         echo "
             <script>
-                alert('Inicio de sesion exitoso');
-                window.location.href = '../html/pagina_principalAlumno.html';
+                alert('Inicio de sesión exitoso');
+                window.location.href = '../paginas_emergentes/pagina_principalAlumno1.php';
             </script>
         ";
     } else {
+        // El usuario no existe, redirigir al usuario a la página de inicio
         echo "
             <script>
                 alert('El usuario que usted ingresó no existe');
@@ -38,4 +37,6 @@
             </script>
         ";
     }
+}
 ?>
+
