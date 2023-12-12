@@ -1,4 +1,4 @@
-package _p147_TercerExamenParcial;
+package Practica_30;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -16,6 +16,7 @@ public class Util {
         fpersonas.close();
     }
 
+    @SuppressWarnings("unchecked")
     public static ArrayList<Jugador> desSerializarDatos(String archivo) throws IOException, ClassNotFoundException {
         ArrayList<Jugador> datos;
         FileInputStream arch = new FileInputStream(archivo);
