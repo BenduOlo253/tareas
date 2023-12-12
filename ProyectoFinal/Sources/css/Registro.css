@@ -1,85 +1,85 @@
 /* Estilos globales para el cuerpo del documento */
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Elimina el margen exterior */
+  padding: 0; /* Elimina el relleno interior */
   background: url("../images/Solaire.jpg"); /* Fondo de la página */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Establece la fuente principal para el texto */
 }
 
 /* Estilos para el área principal de contenido */
 main {
-  width: 30%;
-  margin: auto;
-  padding: 1em 8vw;
-  background: white;
+  width: 30%; /* Establece el ancho del área principal al 30% del contenedor */
+  margin: auto; /* Centra el área principal horizontalmente */
+  padding: 1em 8vw; /* Agrega relleno al área principal */
+  background: white; /* Color de fondo del área principal */
   box-shadow: 0 0 20px #ddd; /* Sombra alrededor del área principal */
 }
 
 /* Estilos para el título principal */
 h1 {
-  text-align: center;
-  color: #1F5F74;
-  border-bottom: 1px solid #C4CBCE;
-  padding-bottom: .2em;
+  text-align: center; /* Alinea el texto al centro */
+  color: #1F5F74; /* Color del texto del título principal */
+  border-bottom: 1px solid #C4CBCE; /* Borde inferior sólido */
+  padding-bottom: .2em; /* Agrega relleno en la parte inferior del título principal */
 }
 
 /* Estilos para los elementos del formulario */
 form > div {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
+  margin-bottom: 20px; /* Agrega espacio en la parte inferior de los elementos del formulario */
+  display: flex; /* Establece la visualización como caja flexible */
+  flex-direction: column; /* Establece la dirección de la columna para los elementos del formulario */
+  gap: 3px; /* Establece el espacio entre los elementos del formulario */
 }
 
 /* Estilos para la imagen del formulario */
 form img {
-  width: 200px;
-  border-radius: 50%;
-  border: 6px solid #AAA;
+  width: 200px; /* Establece el ancho de la imagen del formulario a 200 píxeles */
+  border-radius: 50%; /* Aplica un radio de borde del 50% para crear una imagen circular */
+  border: 6px solid #AAA; /* Establece un borde sólido de 6 píxeles con color gris claro */
 }
 
 /* Estilos para el primer div del formulario */
 form div:first-child {
-  align-items: center;
+  align-items: center; /* Centra los elementos del primer div del formulario */
 }
 
 /* Estilos para el input de archivo oculto en el primer div del formulario */
 form div:first-child input {
-  display: none;
+  display: none; /* Oculta el input de archivo en el primer div del formulario */
 }
 
 /* Estilos para la etiqueta del primer div del formulario */
 form div:first-child label {
-  background: #1F5F74;
-  color: white;
-  padding: 6px 20px;
-  cursor: pointer;
-  border-radius: 3px;
+  background: #1F5F74; /* Establece el fondo de la etiqueta del primer div del formulario */
+  color: white; /* Establece el color del texto de la etiqueta del primer div del formulario */
+  padding: 6px 20px; /* Agrega relleno a la etiqueta del primer div del formulario */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre la etiqueta del primer div del formulario */
+  border-radius: 3px; /* Agrega un radio de borde de 3 píxeles */
 }
 
 /* Estilos para la sección de género del formulario */
 .genero {
-  flex-direction: row;
+  flex-direction: row; /* Establece la dirección de la fila para la sección de género del formulario */
 }
 
 /* Estilos para los campos de entrada del formulario */
 form input {
-  padding: 8px 4px;
-  border: 1px solid #AAA;
-  border-radius: 3px;
+  padding: 8px 4px; /* Agrega relleno a los campos de entrada del formulario */
+  border: 1px solid #AAA; /* Establece un borde sólido de 1 píxel con color gris claro */
+  border-radius: 3px; /* Agrega un radio de borde de 3 píxeles */
 }
 
-/* Estilos específicos para los input de tipo radio dentro de la sección de género */
+/* Estilos específicos para los input de tipo radio dentro de la sección de género del formulario */
 .genero input[type="radio"] {
-  margin-right: auto;
+  margin-right: auto; /* Establece un margen a la derecha para los input de tipo radio en la sección de género del formulario */
 }
 
 /* Estilos para el botón del formulario */
 form button {
-  padding: 8px 20px;
-  border: 1px solid darkgreen;
-  width: 50%;
-  background: #36551F;
-  color: white;
-  border-radius: 3px;
+  padding: 8px 20px; /* Agrega relleno al botón del formulario */
+  border: 1px solid darkgreen; /* Establece un borde sólido de 1 píxel con color verde oscuro */
+  width: 50%; /* Establece el ancho del botón del formulario al 50% del contenedor */
+  background: #36551F; /* Establece el color de fondo del botón del formulario */
+  color: white; /* Establece el color del texto del botón del formulario */
+  border-radius: 3px; /* Agrega un radio de borde de 3 píxeles */
 }

@@ -1,52 +1,111 @@
+<!-- Home_Alumno.php -->
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum Vitae</title>
-    <link rel = "stylesheet" href = "../">
+    <!-- Configuración del documento -->
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Página de Inicio del Usuario</title>
+
+    <!-- Script para abrir una nueva ventana -->
+    <script>
+        function acerca_de() {
+            // Especifica la URL y otros parámetros de la nueva ventana
+            var url = "acerca_de.html";
+            var nombreVentana = "_blank";
+            var opciones = "width=600,height=400";
+            // Abre la nueva ventana
+            window.open(url, nombreVentana, opciones);
+        }
+    </script>
+
+    <!-- Enlace al archivo de estilo CSS -->
+    <link rel='stylesheet' href='../css/Home_Alumno.css'>
 </head>
-<body>
-    <div id="contenido">
-        <div id="datos-container">
-            <h1>Currículum Vitae</h1>
+<?php
+// Incluye el archivo de conexión a la base de datos y comienza la sesión
+include "../php/conexion.php";
+session_start();
 
-            <form id="datosForm">
-                <div class="datos">
-                    <strong>Nombres:</strong> <span id="nombres">Juan</span>
-                    <input type="text" id="nuevosNombres" name="nuevosNombres" style="display:none;">
-                </div>
+// Verifica si el usuario está autenticado
+if (!isset($_SESSION['username'])) {
+    header("Location: ../../index.html"); // Redirige al usuario si no está autenticado
+    exit();
+}
 
-                <div class="datos">
-                    <strong>Apellido Paterno:</strong> <span id="apellidoPaterno">Pérez</span>
-                    <input type="text" id="nuevoApellidoPaterno" name="nuevoApellidoPaterno" style="display:none;">
-                </div>
+// Obtiene la matrícula del usuario de la sesión
+$matricula = $_SESSION['username'];
 
-                <div class="datos">
-                    <strong>Apellido Materno:</strong> <span id="apellidoMaterno">Gómez</span>
-                    <input type="text" id="nuevoApellidoMaterno" name="nuevoApellidoMaterno" style="display:none;">
-                </div>
+// Consulta SQL para obtener datos de la base de datos
+$sql = "SELECT * FROM alumnos WHERE Matricula = ?";
+$stmt = mysqli_prepare($conn, $sql);
+mysqli_stmt_bind_param($stmt, "s", $matricula);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 
-                <div class="datos">
-                    <strong>Correo Electrónico:</strong> <span id="correoElectronico">juan.perez@example.com</span>
-                    <input type="text" id="nuevoCorreoElectronico" name="nuevoCorreoElectronico" style="display:none;">
-                </div>
+if ($result->num_rows > 0) {
+    // Obtiene los datos del usuario
+    $userData = $result->fetch_assoc();
 
-                <div class="datos">
-                    <strong>Género:</strong> <span id="genero">Masculino</span>
-                    <input type="text" id="nuevoGenero" name="nuevoGenero" style="display:none;">
-                </div>
+    // Muestra la estructura HTML de la página
+    echo "
+        <body>
+            <!-- Menú de navegación -->
+            <ul class='menu'>
+                <li><a href='Home_Alumno.php'>Inicio</a></li>
+                <li><a href='#' onclick='acerca_de()'>Acerca de</a></li>
+                <li class='submenu'><a href='#'>Opciones</a>
+                    <ul class='submenu'>
+                        <li><a href='Editar_Perfil.php'>Editar datos</a></li>
+                        <li><a href='../../index.html'>Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
 
-                <div class="datos">
-                    <strong>Matrícula:</strong> <span id="matricula">123456</span>
-                    <input type="text" id="nuevaMatricula" name="nuevaMatricula" style="display:none;">
-                </div>
+            <!-- Contenido principal -->
+            <main>
+                <!-- Saludo de bienvenida -->
+                <h1>Bienvenido, <span id='nombreUsuario'>" . $userData['Usuario'] . "</span>!</h1>
+                
+                <!-- Formulario con los datos del usuario -->
+                <form class='Datos_Usuario'>
+                    <div>
+                        <!-- Mostrar la fotografía del usuario -->
+                        <img src='../images/" . $userData["Fotografia"] . "' alt='Foto del usuario'><br>
+                    </div>
+                    <div>
+                        <!-- Mostrar la matrícula del usuario -->
+                        <strong>Matricula: </strong> <span id='nombres'>" . $userData['Matricula'] . "</span><br>
+                    </div>
+                    <div>
+                        <!-- Mostrar los nombres del usuario -->
+                        <strong>Nombres:</strong> <span id='nombres'>" . $userData['Nombres'] . "</span><br>
+                    </div>
+                    <div>
+                        <!-- Mostrar los apellidos del usuario -->
+                        <strong>Apellidos:</strong> <span id='nombres'>". $userData['primApellido'] . " " . $userData['segApellido'] . "</span><br>
+                    </div>
+                    <div>
+                        <!-- Mostrar el género del usuario -->
+                        <strong>Genero: </strong> <span id='nombres'>" . $userData['Genero'] . "</span><br>
+                    </div>
+                    <div>
+                        <!-- Mostrar la fecha de nacimiento del usuario -->
+                        <strong>Fecha de nacimiento: </strong> <span id='nombres'>" . $userData['Nacimiento'] . "</span><br>
+                    </div>
+                    <div>
+                        <!-- Mostrar el correo del usuario -->
+                        <strong>Correo: </strong> <span id='nombres'>" . $userData['Correo'] . "</span><br>
+                    </div>
+                </form>
+            </main>
+        </body>
+    ";
+} else {
+    echo "0 resultados.";
+}
 
-                <button type="button" onclick="habilitarEdicion()">Editar Datos</button>
-                <button type="button" style="display:none;" onclick="guardarCambios()">Guardar Cambios</button>
-            </form>
-        </div>
-    </div>
-    <script src = "../js/scriptPagAl.js"></script>
-</body>
+// Cierra la declaración preparada
+mysqli_stmt_close($stmt);
+?>
 </html>

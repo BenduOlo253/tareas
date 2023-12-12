@@ -1,27 +1,27 @@
-// Definición de la URL de la imagen por defecto
-const defaultFile = 'https://th.bing.com/th/id/R.9aa85e332b03e2559e476b8d14b2def9?rik=E6uwz7gAOpTwgw&pid=ImgRaw&r=0';
+// URL de la imagen por defecto
+const defaultFile = 'https://stonegatesl.com/wp-content/uploads/2021/01/avatar-300x300.jpg';
 
-// Obtiene referencia al elemento de entrada de archivo y a la etiqueta de la imagen
+// Obtener elementos del DOM
 const file = document.getElementById('foto');
 const img = document.getElementById('img');
 
-// Añade un event listener al cambio en el elemento de entrada de archivo
+// Agregar un event listener al cambio de archivo en el input
 file.addEventListener('change', e => {
-  // Verifica si se seleccionó un archivo
+  // Verificar si se seleccionó un archivo
   if (e.target.files[0]) {
-    // Crea un objeto FileReader para leer el contenido del archivo
+    // Crear un objeto FileReader para leer el archivo
     const reader = new FileReader();
-
-    // Función que se ejecuta al cargar el contenido del archivo
+    
+    // Configurar la función que se ejecutará al cargar el archivo
     reader.onload = function (e) {
-      // Actualiza la fuente de la imagen con los datos codificados en base64 del archivo
+      // Cambiar la fuente de la imagen al contenido del archivo cargado
       img.src = e.target.result;
     };
 
-    // Lee el contenido del archivo como datos URL (base64)
+    // Leer el archivo como una URL de datos (data URL)
     reader.readAsDataURL(e.target.files[0]);
   } else {
-    // Si no se selecciona ningún archivo, muestra la imagen por defecto
+    // Si no se selecciona un archivo, mostrar la imagen por defecto
     img.src = defaultFile;
   }
 });

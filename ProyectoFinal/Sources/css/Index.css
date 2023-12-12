@@ -5,94 +5,94 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Establece la fuente Poppins para todo el documento */
 }
 
 /* Estilos para la sección principal */
 section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
-    background: url('../images/Fondo\ 1.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
+    display: flex; /* Establece la visualización como caja flexible */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    min-height: 100vh; /* Establece la altura mínima del 100% del viewport height */
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+    background: url('../images/Fondo\ 1.jpg') no-repeat; /* Establece una imagen de fondo sin repetición */
+    background-position: center; /* Centra la posición de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
 }
 
 /* Estilos para el contenedor del formulario */
 .form-box {
-    position: relative;
-    width: 400px;
-    height: 450px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative; /* Establece la posición relativa */
+    width: 400px; /* Establece el ancho del contenedor del formulario */
+    height: 450px; /* Establece la altura del contenedor del formulario */
+    background: transparent; /* Fondo transparente */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Borde sólido con opacidad */
+    border-radius: 20px; /* Borde redondeado */
+    backdrop-filter: blur(15px); /* Aplica un desenfoque al fondo del contenedor */
+    display: flex; /* Establece la visualización como caja flexible */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
 }
 
 /* Estilos para el título del formulario */
 h2 {
-    font-size: 2em;
-    color: #fff;
-    text-align: center;
+    font-size: 2em; /* Tamaño de fuente */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Alinea el texto al centro */
 }
 
 /* Estilos para los campos de entrada del formulario */
 .inputbox {
-    position: relative;
-    margin: 30px 0;
-    width: 310px;
-    border-bottom: 2px solid #fff;
+    position: relative; /* Establece la posición relativa */
+    margin: 30px 0; /* Agrega margen superior e inferior */
+    width: 310px; /* Establece el ancho del campo de entrada */
+    border-bottom: 2px solid #fff; /* Borde inferior sólido */
 }
 
 .inputbox label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    color: #fff;
-    font-size: 1em;
-    pointer-events: none;
-    transition: .5s;
+    position: absolute; /* Establece la posición absoluta */
+    top: 50%; /* Alinea la etiqueta en el centro verticalmente */
+    left: 5px; /* Alinea la etiqueta a la izquierda */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+    color: #fff; /* Color del texto */
+    font-size: 1em; /* Tamaño de fuente */
+    pointer-events: none; /* No permite eventos del puntero en la etiqueta */
+    transition: .5s; /* Transición de 0.5 segundos */
 }
 
 input:focus ~ label,
 input:valid ~ label {
-    top: -5px;
+    top: -5px; /* Mueve la etiqueta hacia arriba cuando el campo de entrada está enfocado o tiene datos */
 }
 
 .inputbox input {
-    width: 100%;
-    height: 50px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    padding: 0 35px 0 5px;
-    color: #fff;
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+    height: 50px; /* Establece la altura del campo de entrada */
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno al enfocar */
+    font-size: 1em; /* Tamaño de fuente */
+    padding: 0 35px 0 5px; /* Alinea el texto y el cursor en el campo de entrada */
+    color: #fff; /* Color del texto */
 }
 
 .inputbox ion-icon {
-    position: absolute;
-    right: 8px;
-    color: #fff;
-    font-size: 1.2em;
-    top: 20px;
+    position: absolute; /* Establece la posición absoluta */
+    right: 8px; /* Alinea el icono a la derecha */
+    color: #fff; /* Color del icono */
+    font-size: 1.2em; /* Tamaño de fuente */
+    top: 20px; /* Alinea el icono hacia abajo */
 }
 
 /* Estilos para el botón de inicio de sesión */
 button {
-    width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    background: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: 600;
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+    height: 40px; /* Establece la altura del botón */
+    border-radius: 40px; /* Borde redondeado */
+    background: #fff; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno al enfocar */
+    cursor: pointer; /* Cambia el cursor a un puntero */
+    font-size: 1em; /* Tamaño de fuente */
+    font-weight: 600; /* Grosor de fuente */
 }

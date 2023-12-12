@@ -1,6 +1,6 @@
-//Alumno: Jose Manuel Roberto Badillo.
+//Creador: Jose Manuel Roberto Badillo.
 
-package _p147_TercerExamenParcial;
+package Practica_30;
 
 //Se importan las librerias necesarias.
 import javax.swing.*;

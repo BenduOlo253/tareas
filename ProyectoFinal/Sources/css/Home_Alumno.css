@@ -1,0 +1,124 @@
+/* Estilos globales para el cuerpo del documento */
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../images/Solaire.jpg"); /* Fondo de la página */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Estilos para el área principal de contenido */
+main {
+  width: 30%; /* Establece el ancho del área principal de contenido al 30% del contenedor */
+  margin: auto; /* Centra el área principal de contenido */
+  padding: 1em 8vw; /* Agrega relleno al área principal de contenido */
+  background: white; /* Establece el color de fondo del área principal de contenido */
+  box-shadow: 0 0 20px #ddd; /* Agrega una sombra alrededor del área principal de contenido */
+}
+
+/* Estilos para el título principal */
+h1 {
+  text-align: center; /* Centra el texto del título principal */
+  color: #1F5F74; /* Establece el color del texto del título principal */
+  border-bottom: 1px solid #C4CBCE; /* Agrega un borde inferior de 1 píxel al título principal */
+  padding-bottom: .2em; /* Agrega relleno en la parte inferior del título principal */
+}
+
+/* Estilos para los elementos del formulario */
+form > div {
+  margin-bottom: 20px; /* Agrega espacio en la parte inferior de los elementos del formulario */
+  display: flex; /* Hace que los elementos del formulario sean flexibles */
+  flex-direction: column; /* Establece la dirección de la columna para los elementos del formulario */
+  gap: 3px; /* Establece el espacio entre los elementos del formulario */
+}
+
+/* Estilos para la imagen del formulario */
+form img {
+  width: 200px; /* Establece el ancho de la imagen del formulario a 200 píxeles */
+  border-radius: 50%; /* Aplica un radio de borde del 50% para crear una imagen circular */
+  border: 6px solid #AAA; /* Establece un borde sólido de 6 píxeles con color gris claro */
+}
+
+/* Estilos para el primer div del formulario */
+form div:first-child {
+  align-items: center; /* Centra los elementos del primer div del formulario */
+}
+
+/* Estilos para la etiqueta del primer div del formulario */
+form div:first-child label {
+  background: #1F5F74; /* Establece el fondo de la etiqueta del primer div del formulario */
+  color: white; /* Establece el color del texto de la etiqueta del primer div del formulario */
+  padding: 6px 20px; /* Agrega relleno a la etiqueta del primer div del formulario */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre la etiqueta del primer div del formulario */
+  border-radius: 3px; /* Agrega un radio de borde de 3 píxeles */
+}
+
+/* Estilos para la sección de género del formulario */
+.genero {
+  flex-direction: row; /* Establece la dirección de la fila para la sección de género del formulario */
+}
+
+/* Estilos para los campos de entrada del formulario */
+form input {
+  padding: 8px 4px; /* Agrega relleno a los campos de entrada del formulario */
+  border: 1px solid #AAA; /* Establece un borde sólido de 1 píxel con color gris claro */
+  border-radius: 3px; /* Agrega un radio de borde de 3 píxeles */
+}
+
+/* Estilos específicos para los input de tipo radio dentro de la sección de género del formulario */
+.genero input[type="radio"] {
+  margin-right: auto; /* Establece un margen a la derecha para los input de tipo radio en la sección de género del formulario */
+}
+
+/* Estilos para el menú principal */
+ul.menu {
+  list-style-type: none; /* Elimina la viñeta de la lista */
+  margin: 0;
+  padding: 0;
+  background-color: #333; /* Color de fondo del menú principal */
+}
+
+ul.menu li {
+  display: inline-block; /* Hace que los elementos de lista se muestren en línea */
+}
+
+ul.menu li a {
+  display: block; /* Hace que los enlaces ocupen toda la anchura del contenedor */
+  padding: 15px 20px; /* Agrega relleno a los enlaces del menú principal */
+  color: #fff; /* Color del texto del menú principal */
+  text-decoration: none; /* Elimina subrayados de los enlaces del menú principal */
+}
+
+ul.menu li a:hover {
+  background-color: #555; /* Cambia el color de fondo al pasar el ratón sobre los elementos del menú */
+}
+
+/* Estilos para el submenú */
+ul.menu .submenu {
+  position: relative; /* Establece una posición relativa para el submenú */
+}
+
+ul.menu .submenu ul {
+  display: none; /* Oculta el submenú de forma predeterminada */
+  position: absolute; /* Establece una posición absoluta para el submenú */
+  top: 100%; /* Alinea el submenú en la parte inferior del elemento padre */
+  left: 0; /* Alinea el submenú a la izquierda del elemento padre */
+  background-color: #333; /* Color de fondo del submenú */
+}
+
+ul.menu .submenu:hover ul {
+  display: block; /* Muestra el submenú al pasar el ratón sobre el elemento padre */
+}
+
+ul.menu .submenu ul li {
+  display: block; /* Muestra los elementos de lista del submenú en bloque */
+}
+
+ul.menu .submenu ul li a {
+  padding: 10px 15px; /* Agrega relleno a los enlaces del submenú */
+  color: #fff; /* Color del texto del submenú */
+  text-decoration: none; /* Elimina subrayados de los enlaces del submenú */
+}
+
+ul.menu .submenu ul li a:hover {
+  background-color: #555; /* Cambia el color de fondo al pasar el ratón sobre los elementos del submenú */
+}

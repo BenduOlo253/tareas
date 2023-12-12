@@ -1,4 +1,4 @@
-package _p147_TercerExamenParcial;
+package Practica_30;
 
 import java.io.Serializable;
 
