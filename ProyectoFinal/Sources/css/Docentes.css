@@ -1,0 +1,85 @@
+/* Estilos para todo el cuerpo del documento */
+body {
+    background-image: url(); /* Establece la imagen de fondo del cuerpo */
+    font-family: Arial, sans-serif; /* Especifica la familia de fuentes para el texto */
+}
+
+/* Estilos para tablas */
+table {
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+    width: 100%; /* Establece el ancho de la tabla al 100% de su contenedor */
+    background-color: #fff; /* Establece el color de fondo de la tabla */
+    margin-top: 20px; /* Agrega espacio entre la tabla y el contenido superior */
+}
+
+/* Estilos para encabezados de tabla y celdas de datos */
+th, td {
+    border: 1px solid #dddddd; /* Establece un borde sólido de 1 píxel para las celdas */
+    text-align: left; /* Alinea el texto a la izquierda dentro de las celdas */
+    padding: 8px; /* Agrega relleno dentro de las celdas */
+}
+
+/* Estilos para imágenes */
+img {
+    max-width: 100px; /* Establece el ancho máximo para las imágenes en 100 píxeles */
+    max-height: 100px; /* Establece la altura máxima para las imágenes en 100 píxeles */
+    border-radius: 50%; /* Aplica un radio de borde del 50% para crear una imagen circular */
+}
+
+/* Estilos para el menú de navegación */
+.menu {
+    list-style-type: none; /* Elimina el estilo de lista predeterminado */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Oculta el contenido que desborda el contenedor */
+    background-color: #333; /* Establece el color de fondo del menú */
+}
+
+/* Estilos para elementos de lista del menú */
+.menu li {
+    float: left; /* Hace que los elementos del menú se sitúen a la izquierda para crear un menú horizontal */
+}
+
+/* Estilos para enlaces del menú */
+.menu li a {
+    display: block; /* Hace que los enlaces del menú ocupen toda la anchura */
+    color: white; /* Establece el color del texto en blanco */
+    text-align: center; /* Centra el texto dentro de los enlaces */
+    padding: 14px 16px; /* Agrega relleno a los enlaces */
+    text-decoration: none; /* Elimina subrayados de los enlaces */
+}
+
+/* Estilos para enlaces del menú al pasar el mouse sobre ellos */
+.menu li a:hover {
+    background-color: #ddd; /* Cambia el color de fondo al pasar el mouse */
+    color: black; /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Estilos para submenús */
+.submenu {
+    display: none; /* Oculta los submenús de forma predeterminada */
+    position: absolute; /* Posiciona los submenús de forma absoluta */
+    background-color: #333; /* Establece el color de fondo de los submenús */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Agrega una sombra al submenú */
+    z-index: 1; /* Establece el índice z para asegurar que los submenús aparezcan sobre otros elementos */
+}
+
+/* Estilos para enlaces de submenús */
+.submenu a {
+    float: none; /* No hace flotar los enlaces de los submenús */
+    color: black; /* Establece el color del texto para los enlaces de los submenús */
+    padding: 12px 16px; /* Agrega relleno a los enlaces de los submenús */
+    text-decoration: none; /* Elimina subrayados de los enlaces de los submenús */
+    display: block; /* Hace que los enlaces de los submenús ocupen toda la anchura */
+    text-align: left; /* Alinea el texto a la izquierda dentro de los enlaces de los submenús */
+}
+
+/* Estilos para enlaces de submenús al pasar el mouse sobre ellos */
+.submenu a:hover {
+    background-color: #ddd; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Muestra los submenús al pasar el mouse sobre los elementos del menú */
+.menu li:hover .submenu {
+    display: block; /* Muestra los submenús al pasar el mouse sobre los elementos del menú */
+}

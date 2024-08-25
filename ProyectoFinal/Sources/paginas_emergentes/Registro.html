@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Registro.css">
+    <title>Regístrate</title>
+    
+
+    <!-- Script para manejar la visualización del campo de "otro género" -->
+    <script>
+        // Función para mostrar u ocultar el campo "otro género" según la selección
+        function mostrarOcultarOtroGenero() {
+            var otroGenero = document.getElementById("otro-genero");
+            if (document.getElementById("genero-otro").checked) {
+                otroGenero.style.display = "block";
+            } else {
+                otroGenero.style.display = "none";
+            }
+        }
+
+        // Función para ocultar el campo "otro género"
+        function ocultarOtroGenero() {
+            var otroGenero = document.getElementById("otro-genero");
+            otroGenero.style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Contenido principal -->
+    <main>
+        <!-- Encabezado del formulario de registro -->
+        <h1>Regístrate!</h1>
+
+        <!-- Formulario de registro -->
+        <form action="../php/guardar.php" method="post" class="formulario_register" enctype="multipart/form-data">
+
+            <!-- Campo para agregar foto de perfil -->
+            <div>
+                <img src="../images/Uroboros.jpg" alt="Avatar" id="img" />
+                <input type="file" name="fotousuario" id="foto" accept="image/*" />
+                <label for="foto">Agregar foto de perfil</label>
+            </div>
+
+            <!-- Campos para información personal -->
+            <div>
+                <input type="number" placeholder="Matricula" name = "Matricula" required>
+            </div>
+            <div>
+                <input type = "text" placeholder = "Usuario" name = "Usuario" value = "AlumnoUaz" required>
+            </div>
+
+            <!--Campo para ingresar una nueva contraseña-->
+            <div>
+                <input type = "text" placeholder = "Contraseña" name = "Contraseña" value = "default" required>
+            </div>
+
+            <!-- Otros campos para información personal -->
+            <div>
+                <input type="text" placeholder = "Nombres" name = "Nombres" required>
+            </div>
+
+            <div>
+                <input type = "text" placeholder = "Apellido Paterno" name = "apellido_paterno" required>
+            </div>
+            
+            <div>
+                <input type = "text" placeholder = "Apellido Materno"  name = "apellido_materno" required>
+            </div>
+
+            <div>
+                <input type = "text" placeholder = "Correo" name = "correo" required>
+            </div>
+
+            <!-- Campos para el género -->
+            <div class="genero">
+                <label>Genero:</label>
+                Mujer<input type="radio" name="genero" id="genero-mujer" value="Mujer" required onclick="ocultarOtroGenero()">
+                Hombre<input type="radio" name="genero" id="genero-hombre" value="Hombre" required onclick="ocultarOtroGenero()">
+                Otro<input type="radio" name="genero" id="genero-otro" value="O" onchange="mostrarOcultarOtroGenero()">
+            </div>
+
+            <!-- Campo para especificar otro género -->
+            <div id="otro-genero" style="display:none;">
+                <label for="otro-genero-texto">Especifique su género:</label>
+                <input type="text" name="otro-genero-texto" id="otro-genero-texto" />
+            </div>
+
+            <!-- Otros campos del formulario -->
+
+            <div>
+                <input name="Actualizar_Usuario" type="hidden" value="0">
+            </div>
+
+            <!-- Campo para la fecha de nacimiento -->
+            <div>
+                <label>Fecha de nacimiento: </label><input type="date" name="date" id="Fecha_de_Nacimiento" required>
+            </div>
+
+            <!-- Botones de Limpiar y Registrarse -->
+            <div>
+                <input type = "reset" name = "Limpiar" id = "signIn-button" value = "Limpiar">
+            </div>
+
+            <div>
+                <button type="submit">Registrarse</button>
+            </div>
+        </form>
+        <a href="../../index.html">Cancelar</a>
+    </main>
+
+    <!-- Inclusión del script externo para el manejo de eventos en el formulario -->
+    <script src="../js/Registro.js"></script>
+
+</body>
+
+</html>
